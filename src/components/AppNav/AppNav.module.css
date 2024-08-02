@@ -1,11 +1,17 @@
 .nav {
-  /* display: flex; */
+  display: none;
 
   column-gap: 12px;
-  display: none;
+  
 
 }
 
+.modalNav {
+  display: flex; 
+  flex-direction: column; 
+  gap: 16px; 
+  background: yellow;
+}
 .item {
   color: var(--main);
   font-size: 16px;
@@ -22,7 +28,11 @@
 .item:hover {
   color: var(--accent-color-red);
 }
-
+.modalNav {
+  display: flex; 
+  flex-direction: column; 
+  gap: 16px; 
+}
 @media screen and (min-width: 768px) {
   .nav {
     display: flex;

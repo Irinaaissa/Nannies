@@ -1,16 +1,19 @@
 .headerContainer {
     position: absolute;
-    z-index: 1999;
+    z-index: 199;
     left: 50%;
     transform: translateX(-50%);
 }
 
 .header {
-    margin-top: 12px;
+    
+    padding: 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 320px;
+    width: 375px;
+    box-sizing: border-box;
+    
 }
 
 h2 {

@@ -5,9 +5,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  
   color: var(--secondary-color);
-  background-color: var(--primary-color);
+  background-color: #7795ed;
   font-family: 'Helvetica-Neue-Medium', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

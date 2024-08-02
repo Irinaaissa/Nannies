@@ -11,10 +11,10 @@ function App() {
 
   return (
     <>
-    <AppContainer>
+    
    <AppBar/>
     <AppRouter />
-    </AppContainer>
+    
     </>
   )
 }

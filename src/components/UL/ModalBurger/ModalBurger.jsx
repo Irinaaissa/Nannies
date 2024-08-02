@@ -17,7 +17,8 @@ export default function ModalBurger({ handleModalClose }) {
           <button className={css.btn} type="button" onClick={handleCloseModal}>
             <RiCloseLine />
           </button>
-          <AppNav />
+          <p>gjgjgjgjgjgj</p>
+          <AppNav className={css.modalNav} />
         </div>
       
     </div>

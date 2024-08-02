@@ -6,9 +6,7 @@ import ModalBurger from "../UL/ModalBurger/ModalBurger";
 import { TfiAlignCenter } from "react-icons/tfi";
 import UserMenu from "../UserMenu/UserMenu";
 
-
 export default function AppBar() {
-
   const [isModalActive, setModalActive] = useState(false);
 
   const handleModalOpen = () => {
@@ -18,8 +16,8 @@ export default function AppBar() {
   const handleModalClose = () => {
     setModalActive(false);
   };
-  return (
 
+  return (
     <header className={css.headerContainer}>
       <div className={css.header}>
         <h2>Nanny.Services</h2>
@@ -27,17 +25,15 @@ export default function AppBar() {
           type="button"
           onClick={handleModalOpen}
         >
-          <TfiAlignCenter className={css.icon}/>
+          <TfiAlignCenter className={css.icon} />
         </button>
-        <AppNav/>
-        <UserMenu/>
+        
+        <AppNav isModalOpen={isModalActive} />
+        <UserMenu />
       </div>
-      <div>
-                {isModalActive && (
-                    <ModalBurger handleModalClose={handleModalClose} />
-                )}
-            </div>
+      {isModalActive && (
+        <ModalBurger handleModalClose={handleModalClose} />
+      )}
     </header>
-
   );
 }
