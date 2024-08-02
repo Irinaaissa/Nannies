@@ -8,7 +8,8 @@ const classItem = ({ isActive }) => {
 };
 
 export default function AppNav({ isModalOpen }) {
-  console.log("isModalOpen:", isModalOpen);
+  console.log("isModalOpen in AppNav:", isModalOpen);
+
   // Вибір класу в залежності від значення isModalOpen
   const navClassName = isModalOpen ? css.modalNav : css.nav;
 

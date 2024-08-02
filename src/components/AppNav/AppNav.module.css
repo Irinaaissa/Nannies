@@ -1,24 +1,23 @@
+/* AppNav.module.css */
 .nav {
   display: none;
-
   column-gap: 12px;
-  
-
 }
 
 .modalNav {
-  display: flex; 
-  flex-direction: column; 
-  gap: 16px; 
-  background: yellow;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background: rgb(255, 0, 25); /* Переконайтесь, що це кольорове налаштування видно */
 }
+
 .item {
   color: var(--main);
   font-size: 16px;
   font-weight: 600;
   text-decoration: none;
   font-style: normal;
-  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
 }
 
 .active {
@@ -28,14 +27,9 @@
 .item:hover {
   color: var(--accent-color-red);
 }
-.modalNav {
-  display: flex; 
-  flex-direction: column; 
-  gap: 16px; 
-}
+
 @media screen and (min-width: 768px) {
   .nav {
     display: flex;
-    
   }
 }
