@@ -1,18 +1,22 @@
 /* AppNav.module.css */
 .nav {
   display: none;
-  column-gap: 12px;
+  column-gap: 40px;
 }
 
-.modalNav {
+.modalNav { 
+  margin-top: 40px;
   display: flex;
   flex-direction: column;
+  align-items: end;
+  justify-content: center;
   gap: 16px;
-  background: rgb(255, 0, 25); /* Переконайтесь, що це кольорове налаштування видно */
+  
 }
 
 .item {
-  color: var(--main);
+  color: var(--secondary-color);
+  
   font-size: 16px;
   font-weight: 600;
   text-decoration: none;
@@ -32,4 +36,8 @@
   .nav {
     display: flex;
   }
+  .item {
+    color: var(--primary-color);
+  }
+  
 }

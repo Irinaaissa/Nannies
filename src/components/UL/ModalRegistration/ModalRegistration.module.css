@@ -1,0 +1,35 @@
+.containerRegistration{
+    position: fixed;
+ top: 0;
+ left: 0;
+ width: 100%; 
+ height: 100vh;
+ background-color: rgba(35, 31, 31, 0.4);
+ display: flex;
+ justify-content:center;
+ align-items:flex-start;
+ z-index: 99999;
+ box-sizing: border-box; 
+ border-radius: 30px; 
+}
+.modalContainer{
+    background: var(--primary-color);
+    padding: 40px;
+    border-radius: 8px;
+    position: fixed;
+    border-radius: 30px;
+   width: 100%;
+    
+    box-sizing: border-box;
+}
+.btnClose {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border-radius: 50%; 
+    background-color: #e0e0e0;
+    width: 30px; 
+    height: 30px; 
+    border: none; 
+   
+ }

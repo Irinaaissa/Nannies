@@ -1,8 +1,109 @@
-.container{
+.userMenu {
     display: none;
 }
-@media screen and (min-width: 768px){
-    .container{
+
+.modalUserMenu {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.modalContent {
+    position: relative;
+}
+
+.modalCenter {
+    position: fixed;
+    
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: var(--primary-color);
+    padding: 40px;
+    border-radius: 8px;
+    max-width: 500px;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 99999;
+}
+
+.btnClose {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border-radius: 50%;
+    background-color: #e0e0e0;
+    width: 30px;
+    height: 30px;
+    border: none;
+}
+
+.riCloseLine {
+    width: 16px;
+    height: 16px;
+}
+
+.buttonColor {
+    border: 1px solid rgba(17, 16, 28, 0.1);
+    border-radius: 12px;
+    padding: 12px;
+    width: calc(100% - 24px);
+    height: 52px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 125%;
+    color: #11101c;
+    box-sizing: border-box;
+    background-color: var(--accent-color-green);
+    color: var(--primary-color);
+}
+
+.buttonColorTablet {
+    border: 1px solid rgba(251, 251, 251, 0.4);
+    border-radius: 30px;
+    padding: 10px 20px;
+    width: 120px;
+    height: 48px;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 125%;
+    letter-spacing: -0.01em;
+    color: #fbfbfb;
+    box-sizing: border-box;
+    background-color: transparent;
+}
+
+.buttonColorGreen {
+    background-color: var(--accent-color-green);
+    color: var(--primary-color);
+    border: none;
+    border-radius: 30px;
+    padding: 14px 40px;
+    width: 168px;
+    height: 48px;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 125%;
+    letter-spacing: -0.01em;
+}
+
+.buttonColorTablet:hover {
+    background-color: var(--accent-color-green);
+}
+
+.activeButton {
+    background-color: var(--accent-color-green) !important;
+    color: var(--primary-color) !important;
+}
+
+@media screen and (min-width: 768px) {
+    .userMenu {
         display: flex;
-    } 
+        gap: 12px;
+    }
 }

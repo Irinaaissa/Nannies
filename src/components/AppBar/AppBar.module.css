@@ -54,9 +54,13 @@ h2 {
         width: 700px;
     }
 }
-
-/* @media screen and (max-width: 767px){ */
-/* .iconButton{ */
-/* display: none; */
-/* } */
-/* } */
+@media screen and (min-width: 1440px){
+    .headerContainer{
+        width: 1184px;
+        box-sizing: border-box;
+    }
+    .header{
+        width: 100%;
+        
+    }
+}

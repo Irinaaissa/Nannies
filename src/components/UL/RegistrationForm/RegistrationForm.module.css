@@ -1,0 +1,82 @@
+/* RegistrationForm.module.css */
+.registrationFormContainer {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    
+    background: var(--primary-color);
+    border-radius: 12px;
+    
+    max-width: 400px; /* Максимальна ширина для контейнера */
+    margin: 0 auto; /* Центрування контейнера */
+}
+.textRegistration {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 120%;
+    letter-spacing: -0.02em;
+    color: #11101c;
+    text-align: center; /* Центрування заголовка */
+}
+
+.text {
+    margin-top: 16px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 125%;
+    color: rgba(17, 16, 28, 0.5);
+    text-align: center; /* Центрування тексту */
+}
+
+
+.registrationForm {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.registrationInput {
+    display: flex;
+    flex-direction: column;
+    width: 100%; /* Задаємо ширину 100% */
+    gap: 16px;
+}
+
+.inputForm {
+    border: 1px solid rgba(17, 16, 28, 0.1);
+    border-radius: 12px;
+    padding: 12px;
+    width: calc(100% - 24px); /* Задаємо ширину 100% з врахуванням padding */
+    height: 52px; /* Висота інпутів */
+  
+  font-family: "Helvetica Neue", sans-serif;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 125%;
+    color: #11101c;
+    box-sizing: border-box;
+    background-color: var(--primary-color);
+}
+
+.buttonColor {
+    height: 52px;
+    width: calc(100% - 24px);
+    padding: 12px;
+    border-radius: 12px;
+    margin-top: 32px;
+    background-color: var(--accent-color-green);
+    border: none; /* Без обводки */
+    font-family: var(--font-family);
+font-weight: 500;
+font-size: 16px;
+line-height: 125%;
+letter-spacing: -0.01em;
+color:var(--primary-color);
+}
+
+.buttonColor:hover {
+    background-color: #0056b3; /* Колір при наведенні */
+}
