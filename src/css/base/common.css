@@ -6,7 +6,7 @@ body {
   justify-content: center;
   align-items: flex-start;
   color: var(--secondary-color);
-  background-color: #7795ed;
+   background-color: #f0f0f0;
   font-family: 'Helvetica-Neue-Medium', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

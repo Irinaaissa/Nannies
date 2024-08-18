@@ -1,19 +1,29 @@
+/* AppBar.module.css */
+
 .headerContainer {
-    position: absolute;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     z-index: 199;
-    left: 50%;
-    transform: translateX(-50%);
+    background-color: transparent;
+    transition: background-color 0.3s ease;
 }
 
 .header {
     
+    width: 100%;
+    margin: 0 auto;
     padding: 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 375px;
     box-sizing: border-box;
-    
+    background-color: transparent;
+}
+
+.accentColor {
+    background-color: var(--accent-color-green);
 }
 
 h2 {
@@ -21,22 +31,22 @@ h2 {
     font-family: var(--font-family);
     font-weight: 500;
     font-size: 18px;
-    line-height: 1, 2;
+    line-height: 1.2;
     letter-spacing: -0.02em;
     color: var(--primary-color);
 }
 
 .iconButton {
     padding: 0;
-    background-color: var(--accent-color-green);
-    border: var(--accent-color-green);
+    background-color: transparent;
+    border: none;
 }
 
 .icon {
     width: 20px;
     height: 20px;
-    background-color: var(--accent-color-green);
-    border: var(--accent-color-green);
+    background-color: transparent;
+    border: none;
     color: var(--primary-color);
 }
 
@@ -45,22 +55,23 @@ h2 {
 }
 
 @media screen and (min-width: 768px) {
-
-    .iconButto,
+    .iconButton,
     .icon {
         display: none;
     }
-    .header{
-        width: 700px;
+
+    .header {
+        width: 100%;
     }
 }
-@media screen and (min-width: 1440px){
-    .headerContainer{
-        width: 1184px;
-        box-sizing: border-box;
-    }
-    .header{
+
+@media screen and (min-width: 1440px) {
+    .header {
         width: 100%;
-        
+
+    }
+    .headerContainer{
+        padding-left: 128px;
+        padding-right: 128px;
     }
 }
