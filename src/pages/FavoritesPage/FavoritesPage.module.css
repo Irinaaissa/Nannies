@@ -1,0 +1,20 @@
+.container {
+    margin-top: 20px;
+    width: 100%; /* Весь доступний простір */
+    max-width: 100%; /* Відміна обмеження ширини */
+    padding: 10px;
+    box-sizing: border-box;
+}
+@media screen and (min-width: 768px) {
+    .container {
+        width: 100%; /* На середніх екранах */
+        max-width: 100%; /* Забезпечення адаптивності */
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .container {
+        width: 100%; /* На великих екранах */
+        max-width: 1440px;
+    }
+}

@@ -10,7 +10,8 @@ const nanniesSlice = createSlice({
         error: null,
         perPage: 4,
         currentPage: 1,
-        filter: "all", 
+        filter: "a", 
+        favorites: [],
     },
     reducers: {
         incrementPage(state) {
@@ -31,6 +32,16 @@ const nanniesSlice = createSlice({
           
           state.filter = action.payload; // Оновлюємо filter
       },
+      addToFavorite(state, action) {
+        const nannyId = action.payload;
+        state.favorites.push(nannyId);
+        
+    },
+    deleteFromFavorite(state, action) {
+        const nannyId = action.payload;
+        state.favorites = state.favorites.filter(id => id !== nannyId);
+        
+    }
     },
     extraReducers: (builder) =>
       builder
@@ -47,7 +58,7 @@ const nanniesSlice = createSlice({
           state.items = [...state.items, ...newItems];
       })
         .addCase(fetchNanniesPage.rejected, (state, action) => {
-          c
+       
           state.error = true;
           state.loading = false;
         })
@@ -57,5 +68,5 @@ const nanniesSlice = createSlice({
 
   export const nanniesReducer = nanniesSlice.reducer;
   export const {
-    setPage, incrementPage, resetItems, resetPage,setFilter
+    setPage, incrementPage, resetItems, resetPage,setFilter,addToFavorite,deleteFromFavorite
   } = nanniesSlice.actions;

@@ -6,7 +6,7 @@ export default function Reviews({ reviews  }) {
     return (
         <div className={css.container}>
             <ReviewsList reviews={reviews} />
-            <button>Make an appointment</button>
+            <button className={css.button}>Make an appointment</button>
         </div>
     );
 }

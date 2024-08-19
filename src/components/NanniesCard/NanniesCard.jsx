@@ -3,6 +3,9 @@ import { calculateAge } from "../UL/Helpers/price";
 import Reviews from "../UL/Reviews/Reviews";
 import { useState } from "react";
 import spritePath from '../../assets/react.svg';
+import { addToFavorite, deleteFromFavorite } from '../../redux/catalog/slice'; 
+import { useDispatch, useSelector } from "react-redux";
+import { selectFavoriteIds } from "../../redux/catalog/selectors";
 
 export default function NanniesCard({ id, name, avatar_url, birthday, experience, kids_age, characters, education, about, reviews, location, rating, price_per_hour }) {
     const [readMore, setReadMore] = useState(false);
@@ -10,14 +13,23 @@ export default function NanniesCard({ id, name, avatar_url, birthday, experience
     const handleReadMore = () => {
         setReadMore(true); 
     };
+    const dispatch = useDispatch();
+    const favoriteIds = useSelector(selectFavoriteIds);
+    const isFavorite = favoriteIds.includes(id);
 
-
+    const handleClick = () => {
+        if (isFavorite) {
+            dispatch(deleteFromFavorite(id));
+        } else {
+            dispatch(addToFavorite(id));
+        }
+    };
     return (
         <div className={css.container}>
             <img src={avatar_url} alt={`Avatar of ${name}`} className={css.avatar} />
             <div className={css.details}>
                 <div className={css.containerName}>
-                    <h3>{name}</h3>
+                    <h3 className={css.name}>{name}</h3>
                     <ul className={css.containerInfo}>
                         <li className={css.location}><svg
                             className={css.icon}
@@ -46,6 +58,19 @@ export default function NanniesCard({ id, name, avatar_url, birthday, experience
                             <li className={css.location}>Price/1 <span className={css.spanPrice}>{price_per_hour} $</span> </li>
 
                     </ul>
+                    <button onClick={handleClick} className={css.iconButton}>
+                            <svg
+                                className={`${css.icon} ${isFavorite ? css.favorite : ''}`}
+                                width="16"
+                                height="16"
+                                aria-label="btn icon"
+                                fill="none"
+                                stroke="currentColor"
+                                strokeWidth="2"
+                            >
+                                <use href={`${spritePath}#icon-heart1`} />
+                            </svg>
+                        </button>
                 </div>
                 <ul className={css.detailsList}>
                     <li className={css.list}>Age: <span className={css.spanAge}>{age}</span></li>

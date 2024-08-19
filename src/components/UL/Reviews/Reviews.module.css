@@ -1,2 +1,26 @@
+.button {
+    margin-top: 32px;
+    border-radius: 30px;
+    padding: 8px 12px;
+    width: 120px;
+    height: 40px;
+    background: #103931;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 8px;
+    line-height: 125%;
+    letter-spacing: -0.01em;
+    color: #fbfbfb;
+}
 
-
+@media screen and (min-width: 768px) {
+    .button{
+        font-size: 14px;
+        padding: 14px 28px;
+        width: 215px;
+        height: 48px;
+    }
+}
+@media screen and (min-width: 1440px) {
+    
+}

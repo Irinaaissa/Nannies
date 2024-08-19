@@ -1,16 +1,15 @@
-/* NanniesCard.module.css */
 .container {
     margin-top: 20px;
-    width: 100%; /* Картка займає всю ширину контейнера */
-    max-width: 100%; /* Відміна обмеження ширини */
+    max-width: 100%; /* Встановлюємо максимальну ширину 100% */
     background-color: #fff;
     padding: 10px;
     border: 1px solid black;
     display: flex;
+   
     align-items: flex-start;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    box-sizing: border-box; /* Забезпечує коректну адаптацію розміру */
+    box-sizing: border-box;
 }
 
 .avatar {
@@ -20,25 +19,26 @@
     object-fit: cover;
     border-radius: 10px;
     border: 2px solid var(--pink);
-    margin-right: 15px;
+    margin-right: 8px;
 }
 
 .details {
     display: flex;
     flex-direction: column;
-    width: 100%; /* Весь доступний простір */
+    width: calc(100% - 54px - 15px); /* Забезпечує, що інформація займає весь простір поруч із аватаром */
 }
 
-h3 {
+.name {
     font-family: var(--font-family);
     font-weight: 500;
-    font-size: 18px;
+    font-size: 14px;
     line-height: 100%;
     color: #11101c;
     margin: 0 0 10px 0;
 }
 
 .detailsList {
+    margin-top: 16px;
     display: flex;
     gap: 8px;
     flex-wrap: wrap; /* Дозволяє переносити елементи на новий рядок */
@@ -64,17 +64,22 @@ h3 {
     color: rgba(17, 16, 28, 0.5);
     letter-spacing: -0.5px;
 }
-.spanAge{
+
+.spanAge {
     text-decoration: underline;
-text-decoration-skip-ink: none;
-color: #11101c;
-}
-.spanList{
+    text-decoration-skip-ink: none;
     color: #11101c;
+    font-size: 8px; 
 }
-.readMore{
+
+.spanList {
+    color: #11101c;
+    font-size: 8px;
+}
+
+.readMore {
     margin-top: 8px;
-  width: 70px;
+    width: 70px;
     font-family: var(--font-family);
     font-weight: 500;
     font-size: 12px;
@@ -85,29 +90,34 @@ color: #11101c;
     background-color: transparent;
     border: none;
 }
-.containerName{
+
+.containerName {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.location{
+
+.location {
     font-family: var(--font-family);
-font-weight: 500;
-font-size: 12px;
-line-height: 150%;
-color: #11101c;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 150%;
+    color: #11101c;
 }
-.containerInfo{
+
+.containerInfo {
     display: flex;
+    align-items: center;
     gap: 8px;
 }
-.spanPrice{
+
+.spanPrice {
     color: #38cd3e;
 }
+
 .containerInfo li {
     position: relative;
-    padding-right: 16px;
-    
+    padding-right: 8px;
     text-align: center; /* Відступ для іконки */
 }
 
@@ -121,39 +131,63 @@ color: #11101c;
     height: 16px;
     background-color: #11101c;
 }
-.icon{
-    padding-right: 8px;
+
+.icon {
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1px;
+    
 }
+
+.iconButton {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.favorite {
+    fill: red;
+}
+
 @media screen and (min-width: 768px) {
     .container {
-        width: 100%; /* Ширина на 100% для середніх екранів */
+        width: 100%; 
     }
 
     .avatar {
         width: 96px;
         height: 96px;
+        margin-right: 16px;
     }
 
-    h3 {
+    .name {
         font-size: 24px;
     }
 
     .detailsList, .text, .list {
         font-size: 16px;
     }
-    .readMore{
+    
+    .readMore {
         font-size: 16px; 
         width: 90px; 
     }
-    .location{
+    
+    .location {
         font-size: 16px; 
     }
-    
-    
-    
-    
-    
-    
+    .spanList{
+        font-size: 16px;  
+    }
+    .spanAge {
+        font-size: 16px;
+    }
+    .containerInfo li {
+        
+        padding-right: 16px;
+        
+    }
 }
 
 @media screen and (min-width: 1440px) {
