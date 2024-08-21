@@ -3,18 +3,20 @@
 .headerContainer {
     position: fixed;
     top: 0;
-    left: 0;
+    left: 50%; /* Встановлюємо лівий край на 50% від ширини екрану */
+    transform: translateX(-50%); /* Зміщуємо вліво на половину ширини, щоб центрувати */
     width: 100%;
     z-index: 199;
     background-color: transparent;
     transition: background-color 0.3s ease;
+    box-sizing: border-box;
 }
 
 .header {
     
     width: 100%;
     margin: 0 auto;
-    padding: 20px;
+    padding: 20px 50px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -68,10 +70,14 @@ h2 {
 @media screen and (min-width: 1440px) {
     .header {
         width: 100%;
+        max-width: 1440px;
+        
 
     }
     .headerContainer{
-        padding-left: 128px;
-        padding-right: 128px;
+        margin: 0 auto;
+        max-width: 1440px;
+       
+       
     }
 }

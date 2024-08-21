@@ -11,7 +11,7 @@ export default function ModalRegistration({ handleModalClose }) {
     };
 
     return (
-        <div className={css.containerLogIn} onClick={handleCloseModal}>
+        <div className={css.containerRegistration} onClick={handleCloseModal}>
             <div className={css.modalContainer} onClick={(e) => e.stopPropagation()}>
                 <button className={css.btnClose} type="button" onClick={handleCloseModal}>
                     <RiCloseLine className={css.riCloseLine} />
